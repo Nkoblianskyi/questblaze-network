@@ -7,6 +7,7 @@ import Footer from "@/components/footer"
 import CookieConsent from "@/components/cookie-consent"
 import ScrollToTop from "@/components/scroll-to-top"
 import ScrollTopHandler from "@/components/scroll-top-handler"
+import { Suspense } from "react"
 
 const inter = Arvo({ subsets: ["latin"], weight: ["400", "700"] })
 
@@ -52,12 +53,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} antialiased`}>
-        <ScrollTopHandler />
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <CookieConsent />
-        <ScrollToTop />
+        <Suspense fallback={null}>
+          <ScrollTopHandler />
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <CookieConsent />
+          <ScrollToTop />
+        </Suspense>
       </body>
     </html>
   )
