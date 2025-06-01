@@ -23,8 +23,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
-        <div className="absolute inset-0 wood-texture opacity-30"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 wood-texture">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fadeInLeft">
@@ -42,26 +41,10 @@ export default function HomePage() {
                   handcrafted using sustainable materials and time-honoured techniques.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/projects">
-                  <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white group btn-animate">
-                    Explore Our Work
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-amber-600 text-amber-600 hover:bg-amber-50 hover-lift"
-                  >
-                    Get Custom Quote
-                  </Button>
-                </Link>
-              </div>
+
             </div>
             <div className="relative animate-fadeInRight">
-              <div className="relative z-10">
+              <div className="relative z-0">
                 <img
                   src="/hero.png"
                   alt="Premium Plinko Board Showcase"
@@ -70,6 +53,23 @@ export default function HomePage() {
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-amber-200 rounded-full animate-bounce-gentle opacity-60"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-orange-200 rounded-full animate-pulse opacity-40"></div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 z-20">
+              <Link href="/projects">
+                <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white group btn-animate">
+                  Explore Our Work
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-amber-600 text-amber-600 hover:bg-amber-50 hover-lift"
+                >
+                  Get Custom Quote
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
