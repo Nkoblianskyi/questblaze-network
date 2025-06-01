@@ -41,7 +41,6 @@ export default function HomePage() {
                   handcrafted using sustainable materials and time-honoured techniques.
                 </p>
               </div>
-
             </div>
             <div className="relative animate-fadeInRight">
               <div className="relative z-0">
